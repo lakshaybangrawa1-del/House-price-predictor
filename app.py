@@ -4,7 +4,7 @@ from sklearn.linear_model import LinearRegression
 
 # Set page configuration
 st.set_page_config(
-    page_title="VIP Jaipur House Price Predictor",
+    page_title="House Price Predictor, Jaipur",
     page_icon="👑",
     layout="centered"
 )
@@ -34,8 +34,8 @@ model.fit(X, y)
 
 # --- Streamlit User Interface ---
 
-st.title("👑 Ultra-Luxury Jaipur House Price Predictor")
-st.write("Apne 7-Star Sapno ke Ghar ki details daalein aur ₹50,000/sq.ft. ke Super VIP rate se keemat pata karein.")
+st.title("House Price Predictor, Jaipur")
+st.write("Apne Ghar ki details daalein aur keemat pata karein.")
 st.markdown("---")
 
 locality = st.selectbox("Locality", ["Jagatpura (Ultra Premium)", "Mansarovar (VIP)", "Other Premium Areas"])
@@ -78,7 +78,7 @@ st.markdown("---")
 # Predict Button
 if st.button("👑 VIP Keemat Pata Karein", type="primary"):
     # Base Premium Rate as per your choice
-    base_rate_per_sqft = 50000  # ₹50,000 per sq. ft.
+    base_rate_per_sqft = 5000  # ₹5000 per sq. ft.
         
     # Feature multipliers for luxury additions
     feature_multiplier = 1.0
@@ -92,7 +92,7 @@ if st.button("👑 VIP Keemat Pata Karein", type="primary"):
     
     # Celebration!
     st.balloons()
-    st.success(f"### 🎯 Estimated VIP Market Value: ₹ {vip_prediction:,.2f}")
+    st.success(f"### 🎯 Estimated Market Value: ₹ {vip_prediction:,.2f}")
     
     # Lakhs/Crores display
     if vip_prediction >= 10000000:
